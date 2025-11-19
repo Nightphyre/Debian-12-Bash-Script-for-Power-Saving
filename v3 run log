@@ -1,0 +1,37 @@
+Usage: sudo ./cpu_control_v3.sh {status|powersave|restore|monitor|benchmark}
+nightphyr3@cooler:~$ sudo ./cpu_control_v3.sh status
+--- CPU Topology (Alder Lake Hybrid) ---
+CPU CORE NODE SOCKET    MAXMHZ   MINMHZ
+  0    0    0      0 4700.0000 400.0000
+  1    -    -      -         -        -
+  2    1    0      0 4700.0000 400.0000
+  3    -    -      -         -        -
+  4    2    0      0 3500.0000 400.0000
+  5    3    0      0 3500.0000 400.0000
+  6    4    0      0 3500.0000 400.0000
+  7    5    0      0 3500.0000 400.0000
+  8    -    -      -         -        -
+  9    -    -      -         -        -
+ 10    -    -      -         -        -
+ 11    -    -      -         -        -
+----------------------------------------
+Active Processor IDs: 0,2,4-7
+Current Power Draw:   .86 W
+nightphyr3@cooler:~$ sudo ./cpu_control_v3.sh benchmark
+--- Power Conservation Efficiency Benchmark ---
+This test compares wattage between current active cores and full capacity.
+
+1. Measuring BASELINE...
+   Active IDs: [0-11]
+   Avg Power:  2.66 W
+
+2. Measuring POWERSAVE...
+   Active IDs: [0,2,4-7]
+   Avg Power:  1.99 W
+-----------------------------------------------
+RESULTS:
+Transition: [0-11] -> [0,2,4-7]
+Power Saved:      .67 W
+Efficiency Gain:  25.00 %
+-----------------------------------------------
+nightphyr3@cooler:~$ 
