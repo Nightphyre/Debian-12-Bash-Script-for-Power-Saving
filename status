@@ -1,0 +1,23 @@
+nightphyr3@cooler:~$ sudo ./cpu_control_v1.sh 
+[sudo] password for nightphyr3: 
+Usage: sudo ./cpu_control_v1.sh {status|powersave|restore}
+  status    : Show current topology and active cores.
+  powersave : Disable P-core HT and 50% of E-cores.
+  restore   : Bring all cores back online.
+nightphyr3@cooler:~$ sudo ./cpu_control_v1.sh status
+--- CPU Topology (Alder Lake Hybrid) ---
+CPU CORE NODE SOCKET    MAXMHZ   MINMHZ
+  0    0    0      0 4700.0000 400.0000
+  1    -    -      -         -        -
+  2    1    0      0 4700.0000 400.0000
+  3    -    -      -         -        -
+  4    2    0      0 3500.0000 400.0000
+  5    3    0      0 3500.0000 400.0000
+  6    4    0      0 3500.0000 400.0000
+  7    5    0      0 3500.0000 400.0000
+  8    -    -      -         -        -
+  9    -    -      -         -        -
+ 10    -    -      -         -        -
+ 11    -    -      -         -        -
+----------------------------------------
+Online Logical CPUs: 6
